@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/login', to: 'users#login'
   get '/logout', to: 'users#logout'
   post '/loginn', to: 'users#loginn'
+  post '/user_posts', to: 'posts#create'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

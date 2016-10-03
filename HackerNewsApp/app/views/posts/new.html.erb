@@ -1,6 +1,18 @@
-<%= form_for :post, url: posts_path do |f|  %>
+<%= form_for ([current_user, current_user.posts.build]) do |f|  %>
+
+  <% if @post.errors.any? %>
+    <% @post.errors.full_messages.each do |msg| %>
+      <p>
+        <%= msg %>
+      </p>
+    <% end %>
+  <% end %>
 
   <%= f.label :title %>
   <%= f.text_field :title %>
 
+  <%= f.label :url %>
+  <%= f.text_field :url %>
+
+  <%= f.submit "Create Post" %>
 <% end %>
