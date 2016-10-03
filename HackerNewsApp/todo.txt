@@ -1,0 +1,2 @@
+- add user login logic
+- add form to create new post, only if logged in
