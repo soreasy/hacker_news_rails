@@ -9,6 +9,28 @@
   </head>
 
   <body>
+    <nav>
+      <ul>
+        <% if logged_in? %>
+          <li>
+            <%= link_to current_user.username, user_path(current_user)  %>
+          </li>
+          <li>
+            <%= link_to "Logout", logout_path %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to "Register", new_user_path %>
+          </li>
+          <li>
+            <%= link_to "Login", login_path  %>
+          </li>
+        <% end %>
+        <li>
+        <%= link_to "Home", posts_path %>
+        </li>
+      </ul>
+    </nav>
     <%= yield %>
   </body>
 </html>

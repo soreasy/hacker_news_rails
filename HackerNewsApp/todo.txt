@@ -1,2 +1,3 @@
 - add user login logic
 - add form to create new post, only if logged in
+- refactor login/logout methods to session controller
