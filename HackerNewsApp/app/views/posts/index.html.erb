@@ -6,4 +6,6 @@
   <% end %>
 </ul>
 
-<% %>
+<% if logged_in? %>
+  <%= link_to 'Create New Post', new_post_path %>
+<% end %>
